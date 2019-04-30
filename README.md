@@ -1,8 +1,8 @@
-#README.md
+##Folder contents:
 
-Folder contents:
+###./codes:
 
-./codes:
+This folder contains all python3 codes for the sample project. One can implement the codes by running main.py.
 
 constants.py:			Contains all constants used for the sample codes
 
@@ -14,6 +14,10 @@ main.py:			Main function to train and evaluate a neural network with small sampl
 
 ZoomNet_jac_0402.py:		One example customized neural network
 
-./model_outputs:		Contains all output files generated from main.py
+###./model_outputs
 
-./sample_inputs:		Contains sample images/labels. Data from https://www.kaggle.com/c/data-science-bowl-2018
+This folder contains all output files generated from main.py
+
+###./sample_inputs:		
+
+This folder contains sample images/labels. Data from https://www.kaggle.com/c/data-science-bowl-2018
