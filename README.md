@@ -1,6 +1,6 @@
-## Code Sample Summary
+## Code Sample Description
 
-Description: The code is to solve an image segmentation problem using a customized neural network. Image segmentation is applied to identify all nuclei in medical images from different fluorescent methods. Since images are not necessarily of same size, multiple same sized fragments were generated for each image as model inputs, and their predictions were stacked back to original image space to have final predictions.
+The code is to solve an image segmentation problem using a customized neural network. Image segmentation is applied to identify all nuclei in medical images from different fluorescent methods. Since images are not necessarily of same size, multiple same sized fragments were generated for each image as model inputs, and their predictions were stacked back to original image space to have final predictions.
 
 ## Folder Content
 
