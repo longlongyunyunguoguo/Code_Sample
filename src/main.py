@@ -1,10 +1,12 @@
 #!/usr/bin/python3
 
-### Description: The code is to solve an image segmentation problem using a customized 
-### neural network. Image segmentation is applied to identify all nuclei in medical images
-### from different fluorescent methods. Since images are not necessarily of same size, 
-### multiple same sized fragments were generated for each image as model inputs, and their
-### predictions were stacked back to original image space to have final predictions.
+'''
+Description: The code is to solve an image segmentation problem using a customized 
+neural network. Image segmentation is applied to identify all nuclei in medical images
+from different fluorescent methods. Since images are not necessarily of same size, 
+multiple same sized fragments were generated for each image as model inputs, and their
+predictions were stacked back to original image space to have final predictions.
+'''
 
 import ZoomNet_jac_0402 as nn_model
 import learning_functions as lf
