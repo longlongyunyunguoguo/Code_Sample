@@ -14,7 +14,7 @@ def model_fitting(
     track_name, 
     input_dim=(128, 128), 
     epoch_num=10, 
-    batch_size=5
+    batch_size=5,
 ):
     '''
     Train a neural network model with specified training/validation images for 
@@ -40,7 +40,7 @@ def model_fitting(
         filepath, 
         save_best_only=True, 
         monitor="val_loss", 
-        mode="min"
+        mode="min",
     )
     history = History()
     params = {
@@ -61,7 +61,7 @@ def model_fitting(
         steps_per_epoch=max(1, len(train_ids) // batch_size), 
         epochs = epoch_num, validation_data = validation_generator, 
         validation_steps = max(1, len(val_ids) // batch_size), 
-        callbacks = [mcp_save, history]
+        callbacks = [mcp_save, history],
     )
     df = pd.DataFrame.from_dict(history.history)
     filepath = "../model_outputs/History_{}_{:d}.csv".format(track_name, cv_id)
@@ -69,7 +69,7 @@ def model_fitting(
         filepath, 
         sep="\t", 
         index=True, 
-        float_format="%.3f"
+        float_format="%.3f",
     )
     del output_history
 
@@ -90,10 +90,7 @@ def fragment_predict(cv_id, model, track_name, image_data):
     
     pred_label = []
     for t in range(image_data.shape[0]):
-        print("{:d}th image is being processed ... ({:d}/{:d})".format(
-            t + 1, 
-            t + 1, 
-            image_data.shape[0]))
+        print("{:d}th image is being processed ... ({:d}/{:d})".format(t + 1, t + 1, image_data.shape[0]))
         x = image_data.loc[t, 'X']
         y_pred = model.predict(x)
         pred_label.append(y_pred) 
@@ -164,7 +161,7 @@ def model_predict(
             img_shape=img_data.loc[i, "ImageShape"], 
             output=pred_label, 
             stride_x=stride[0], 
-            stride_y=stride[1]
+            stride_y=stride[1],
         )
         output_img = np.where(output_img > cutoff, 1, 0)
         image_pred_label.append((img_data.loc[i, "ImageId"], output_img))
