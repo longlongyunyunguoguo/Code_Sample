@@ -115,7 +115,7 @@ def data_process(datatype="train", label=True):
         train_image_ids, 
         label, 
         img_pattern, 
-        mask_pattern
+        mask_pattern,
     )
     if label:
         COLS = [IMAGE_ID, IMAGE, LABEL]
@@ -134,7 +134,7 @@ class DataGenerator(object):
         dim_y=128, 
         dim_z=3, 
         batch_size=5, 
-        shuffle=True
+        shuffle=True,
     ):
         '''
         Initialization.
@@ -166,9 +166,9 @@ class DataGenerator(object):
             imax = int(len(indexes) / self.batch_size)
             for i in range(imax):
                 list_ids_batch = [
-                                 list_ids[k] 
-                                 for k in indexes[i * self.batch_size:min(len(indexes), 
-                                     (i + 1) * self.batch_size)]
+                    list_ids[k] 
+                    for k in indexes[i * self.batch_size:min(len(indexes), 
+                        (i + 1) * self.batch_size)]
                 ]
                 X, y = self.__data_generation(list_ids_batch, train_df)
                 yield X, y
@@ -407,7 +407,7 @@ def sub_fragment_extract(
             output_x=output_x, 
             output_y=output_y, 
             stride_x=stride_x, 
-            stride_y=stride_y
+            stride_y=stride_y,
         )
         info = (img_id, img_shape, X)
         details.append(info)
