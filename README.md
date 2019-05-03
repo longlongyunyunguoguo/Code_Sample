@@ -4,7 +4,7 @@ The code is to solve an image segmentation problem using a customized neural net
 
 ## Folder Content
 
-### ./codes
+### ./src
 
 This folder contains all python3 codes for the sample project. One can implement the codes by running main.py.
 
