@@ -372,7 +372,7 @@ def sub_fragment_extract(
     data_df, 
     input_dim=(128, 128), 
     output_dim=(100, 100), 
-    stride = (50, 50)
+    stride = (50, 50),
 ):
     '''
     Crop each image into fragments with input_dim size for model inputs with a 
